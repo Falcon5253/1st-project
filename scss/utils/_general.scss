@@ -1,0 +1,757 @@
+//стилизация html тегов
+//.........................................................
+html {
+  background-color: grey;
+  height: 100%;
+}
+body {
+  color: #22262A;
+  font-family: 'Poppins', 'San-serif';
+  border-radius: 60px;
+  text-decoration: none;
+  background-color: white;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  min-height: 100%;
+}
+
+
+//Хэдер
+//.........................................................
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #22262A;
+  height: 83px;
+  border-radius: 10px;
+  &__list {
+    display: flex;
+    gap: 40px;
+    list-style: none; 
+  }
+  &__item {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 100%;
+    color: #22262A;
+    text-decoration: none;
+    transition: color 1.5s;
+  }
+  &__item:visited {
+    color: #22262A;
+  }
+  &__item:hover {
+    text-decoration: underline;
+    color: red;
+  }
+  &__item:active {
+    background-color: red;
+  }
+  &__func-list {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 148px;
+  }
+}
+
+
+//Первая секция
+//.........................................................
+.welcome-screen {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: white;
+  background-image: url('../img/background1.jpg');
+  background-size: cover;
+  height: 900px;
+  min-width: 300px;
+  &__block{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    width: 450px;
+    margin-right: 6%;
+    margin-bottom: 7%;
+  }
+  &__text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    margin: auto 0px 6px 0px;
+    padding-right: 347px;
+  }
+  &__title {
+    margin: 6px 0px 6px 0px;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 100%;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  &__subtitle {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    margin: 6px 0px 12px 0px;
+    padding-right: 44px;
+  }
+}
+.button-list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 34px;
+  margin: 12px 0px 8%;
+  padding: 0px 122px 0px 0px;
+}
+
+
+//Вторая секция
+//.........................................................
+.categories {
+  margin: 100px 5% 0 5%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  &__left-imgs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    width: 720px; //как без задания ширины сделать этот флекс элемент
+    height: 760px;
+
+  }
+  &__left-imgs img {
+    flex-grow: 1;
+  }
+  &__right-img {
+    width: 720px; //того же размера, что и этот?
+    height: 760px;
+
+    position: relative;
+    display: flex;
+  }
+  &__right-img img{
+    flex-grow: 1;
+  }
+}
+.categories a {
+  position: absolute;
+  bottom: 8%;
+  left: 8%;
+}
+
+
+//Третья секция
+.fashion {
+  position: relative;
+  margin: 120px 5% 0 5%;
+  text-align: center;
+  flex-wrap: wrap;
+  &__item
+  &__title h3{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  &__content {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.product-card {
+  text-align: left;
+  width: 350px;
+  &__description {
+    margin-top: 25px;
+  }
+  &__img {
+    width: 100%;
+  }
+  &__img img {
+    width: 100%;
+  }
+  &__price span::before {
+    content: attr(data-currency)' ';
+  }
+}
+.brand-name {
+  font-weight: 300;
+  margin-top: 3px;
+  margin-bottom: 0px;
+}
+.product-name {
+  font-weight: 600;
+  margin-top: 3px;
+  margin-bottom: 0px;
+}
+.product-card__price {
+  margin-top: 3px;
+}
+.old-price {
+  font-weight: 300;
+  text-decoration: line-through;
+  margin-right: 35px;
+}
+.new-price {
+  font-weight: 300;
+  color: #CF2929;
+}
+
+
+//Последняя секция
+//.........................................................
+.fashion_last-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.left-img {
+  width: 50%;
+  margin-top: 250px;
+}
+.top-right-img {
+  position: absolute;
+  top: 200px;
+  width: 43%;
+  right: 3.5%;
+}
+.top-right-img_edge {
+  top: 50%;
+  right: 0;
+  width: 27%;
+}
+.bottom-right-img {
+  position: absolute;
+  top: 53%;
+  right: 0;
+  width: 25.5%;
+}
+.women-fashion-link {
+  position: absolute;
+  color: #22262A;
+  top: 88%;
+  right: 28%;
+}
+//Прощальный экран
+//.........................................................
+.bye-screen {
+  background-color: white;
+  background-image: url('../img/background2.jpg');
+  background-size: cover;
+  width: 90%;
+  padding-left: 10%;
+  height: 900px;
+  background-repeat: no-repeat;
+  text-align: left;
+  margin: 120px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.bye-screen h2 {
+  font-weight: bold;
+  font-size: 80px;
+  margin: 5px 0 10px;
+}
+.bye-screen p {
+  font-weight: 500;
+}
+.bye-screen a {
+  margin-bottom: 200px;
+}
+
+
+//Футер (левая часть)
+//.........................................................
+.footer {
+  position: sticky;
+  top: 100vh;
+  background-color: #F2F8FC;
+  border-radius: 0 0 60px 60px;
+}
+.wrapper {
+  position: sticky;
+  top: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 150px;
+  
+  border-radius: 0 0 60px 60px;
+  gap: 25%
+}
+.our-contacts {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-left: 30px;
+  width: 500px;
+  gap: 50px;
+  &__about-us {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    line-height: 35px;
+  }
+  &__about-us p {
+    margin-bottom: 0;
+    line-height: 24px;
+  }
+  &__about-us a {
+    color: #22262A;
+    text-decoration: none;
+    width: fit-content;
+    transition: color 3s;
+  }
+  &__about-us a:hover {
+    text-decoration: underline;
+    color: red;
+  }
+  &__about-us a:active {
+    background-color: red;
+  }
+  &__icons {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    justify-content: flex-start;
+    padding-left: 0;
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
+
+
+//Ссылки в футере
+//.........................................................
+.email-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin-left: 30px;
+  &__form {
+    height: 120px;
+  }
+  &__form input {
+    margin-top: 10px;
+    height: 45px;
+    min-width: 450px;
+    font-weight: normal;
+    font-size: 15px;
+    border: none;
+    color: #000000;
+    padding-left: 25px;
+  }
+  &__form input:focus {
+    border-width: 3px;
+  } 
+  input::-webkit-input-placeholder {
+    color: #22262A;
+    font-family: 'Poppins', 'San-serif';
+
+  }
+  &__form button {
+    position: absolute;
+    left: 400px;
+    top: 80px;
+    border: none;
+    background: none;
+    font-weight: 600;
+    font-size: 15px;
+  }
+}
+.links {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  &__wrapper ul{
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+  }
+  &__wrapper li {
+    margin-top: 20px;
+    width: fit-content;
+    margin-right: 20px;
+  }
+  &__wrapper li:hover {
+    text-decoration: underline;
+  }
+  &__wrapper li:active {
+    background-color: red;
+  }
+  &__the-link {
+    text-decoration: none;
+    color: #22262A;
+    font-weight: normal;
+    font-size: 15px;
+  }
+}
+//.................................................................
+//..................СТРАНИЦА...ФОРМЫ...............................
+//.................................................................
+
+//Первая форма
+//.................................................................
+.form {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-start;
+}
+.field {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 50px;
+  &__input{
+    box-shadow: 10px 5px 5px black;
+    height: 25px;
+    width: 300px;
+  }
+  &__input:focus{
+    border-width: 3px;
+  }
+  &__button {
+    box-shadow: 10px 5px 5px black;
+    margin-top: 20px;
+    width: 220px;
+    font-size: large;
+    height: 50px;
+    font-weight: bold;
+  }
+}
+.field label {
+  text-shadow: 10px 5px 5px black;
+}
+.field:focus-within{
+  color: red;
+}
+.prefered_time {
+  box-shadow: 10px 5px 5px black;
+  width: 500px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+}
+.prefered_time legend {
+  margin-left: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: white;
+  background-color: black;
+  border: solid black 1px;
+  border-radius: 5px;
+}
+.sex {
+  &__title {
+    flex-grow: 1;
+  }
+  &__span {
+    width: 154px;
+  }
+  &__input {
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+  }
+}
+
+//Вторая форма
+//.........................................................
+dl {
+  margin-top: 100px;
+}
+dt {
+  margin: 5px 20px 5px;
+  font-size: 20px;
+}
+dt::first-letter {
+  font-size: 40px;
+}
+dd {
+  width: 75%;
+}
+dd::before{
+  content: '🛈  ';
+}
+.pseudo{
+  width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 600px 200px;
+  &__list{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: 1em 1em 1em 1em 1em 1em 1em 1em 1em 1em 1em 1em 1em 1em;
+    grid-template-columns: 200px 200px 200px;
+  }
+  &__field {
+    width: 200px;
+  }
+  &__checkbox:checked+label{
+    text-decoration: line-through;
+  }
+  &__field:nth-child(2n){
+    color: white;
+    background-color: black;
+  }
+}
+
+
+
+//Общие классы
+//.........................................................
+.visually-hidden {
+  display: none;
+}
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  text-decoration: none;
+  width: max-content;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  padding-left: 26px;
+  padding-right: 26px;
+  transition: font-size 3s;
+}
+.button:hover {
+  text-decoration: underline;
+  font-size: 25px;
+}
+.button:active {
+  background-color: red;
+}
+.button_black {
+  background-color: #22262A;
+  color: white;
+}
+.button_white {
+  background-color: white;
+  color: #22262A;
+}
+.copyright {
+  text-align: center;
+  font-size: 15px;
+  background-color: #E7F5F8;
+  width: 100%;
+  margin-bottom: 0;
+  height: 70px;
+  padding-top: 20px;
+  border-radius: 0 0 60px 60px;
+}
+.svg-name {
+  display: inline-block;
+}
+::selection {
+  background: purple;
+}
+:disabled{
+  color: #f55b5b;
+  border-width: 0px;
+  background-color: rgb(218, 218, 218);
+}
+.required_text::after{
+  content: ' *';
+  color: red;
+}
+input[type='radio']:checked+label, input[type='checkbox']:checked+label {
+  font-weight: bold;
+}
+
+
+//...............................................................................
+//ЛАБОРАТОРНАЯ РАБОТА НОМЕР 8....................................................
+//...............................................................................
+.gradients {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: white;
+}
+.linear {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(blue, pink);
+}
+.radial {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(red, blue);
+}
+.conic {
+  width: 200px;
+  height: 200px;
+  background: conic-gradient(red, blue);
+}
+.transforms {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+}
+.regular {
+  height: 200px;
+  width: 200px;
+  background-color: greenyellow;
+}
+.rotated {
+  width: 200px;
+  height: 200px;
+  background-color: greenyellow;
+  transform: rotate(30deg);
+}
+.transformed {
+  width: 200px;
+  height: 200px;
+  background-color: greenyellow;
+  transform: scale(1.5, 2);
+}
+.lab8_h {
+  text-align: center;
+  padding-top: 25px;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+.perspective {
+  width: 200px;
+  height: 200px;
+  background-color: greenyellow;
+  transform: perspective(250px) rotateY(20deg);
+}
+.rotatedbyX {
+  width: 200px;
+  height: 200px;
+  background-color: greenyellow;
+  transform: rotateX(60deg);
+}
+.transitions {
+  margin-top: 50xp;
+  display: flex;
+  padding-bottom: 100px;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.rotation {
+  width: 200px;
+  height: 200px;
+  background-color: yellowgreen;
+  transition: background-color 2s, transform 2s;
+}
+.rotation:hover {
+  background-color: #ff0000;
+  width: 200px;
+  height: 200px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(360deg);
+}
+.scale {
+  width: 200px;
+  height: 200px;
+  background-color: yellowgreen;
+  transition: width 2s, height 2s, background-color 2s;
+}
+.scale:hover {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+}
+.spinner {
+  animation-duration: 3s;
+  animation-name: spinner;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin-top: 230px;
+}
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+.the-load {
+  height: 571px;
+  width: 350px;
+  position: absolute;
+  text-align: center;
+  background-image: url('../img/white-card.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation-duration: 3s;
+  animation-name: anim-load;
+  animation-fill-mode: forwards;
+}
+@keyframes anim-load {
+  0%{
+    opacity: 1;
+
+}
+  99%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+.slider_div {
+  margin-top: 50px;
+  display: inline-block;
+}
+.position {
+  border-radius: 100%;
+  border: solid 2px;
+  background-color: grey;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #E7F5F8;
+}
+.position_current {
+  background-color: honeydew;
+  color: #22262A;
+}
+.position_block {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 45px;
+}
